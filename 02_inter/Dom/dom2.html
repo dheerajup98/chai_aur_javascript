@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | create, update, delete</title>
+</head>
+
+<body>
+    <!-- <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thurday</div>
+    </div> -->
+
+
+        <li class="item">javascript</li>
+
+
+</body>
+    
+
+    <script>
+
+        const myDay = document.querySelector('.parent');
+        // console.log(myDay);
+        // console.log(myDay.children);
+        // console.log(myDay.children[1]);
+        // console.log(myDay.children[1].innerHTML);
+
+        for(let i=0;i<=myDay.children.length;i++)
+        {
+            // console.log(myDay.children[i]);
+        }
+
+
+     const mydiv = document.createElement('div');
+    //  console.log(mydiv);
+
+     mydiv.className='main';
+     mydiv.style.backgroundColor="purple";
+    //  mydiv.innerText="chai aur code";
+
+    const mytext = document.createTextNode('chai aur code dheeraj');
+    // console.log(mytext);
+    mydiv.appendChild(mytext);
+    // document.body.appendChild(mydiv);
+
+
+
+       function createli(lang)
+       {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.item').appendChild(li)
+       }
+       createli("python");
+
+    </script>
+</html>

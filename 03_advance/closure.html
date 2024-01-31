@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure aur chai</title>
+</head>
+<body>
+    
+    <button id="or">orange</button>
+    <button id="red">red</button>
+
+
+
+</body>
+
+
+<script>
+    // document.getElementById('or').addEventListener('click',function()
+    // {
+    //     document.body.style.backgroundColor = 'orange';
+    // })
+
+    // document.getElementById('red').addEventListener('click',function()
+    // {
+    //     document.body.style.backgroundColor = 'red';
+    // })
+
+    function clickHandler(color)
+    {
+       
+       return  function()
+        {
+            document.body.style.backgroundColor = `${color}`; 
+        }
+        
+    }
+
+    document.getElementById('red').addEventListener('click',clickHandler("red"));
+    document.getElementById('or').addEventListener('click',clickHandler("orange"));
+
+</script>
+</html>

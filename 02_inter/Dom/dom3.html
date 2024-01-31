@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom </title>
+</head>
+<body>
+
+    <li class="item">java</li>
+    <li class="item">javascript</li>
+    <li class="item">c++</li>
+    
+</body>
+
+
+   <script>
+
+    // create element
+     function craeteLanguage(lang)
+     {
+        const li = document.createElement('li');
+        const use = document.createTextNode(lang);
+        li.appendChild(use);
+        document.querySelector('.item').appendChild(li);
+     }
+
+    //  craeteLanguage("c++");
+
+
+    // edit element
+
+    const newLi = document.querySelector('li:nth-child(2)');
+    console.log(newLi);
+
+    const trueli = document.createElement('li');
+    trueli.textContent = "ruby";
+    newLi.replaceWith(trueli);
+
+
+    //or
+
+    const firstLang = document.querySelector("li:first-child");
+    console.log(firstLang);
+
+    firstLang.outerHTML = "<li> typescript </li>"
+
+
+
+    // remove element
+
+    const removeEle = document.querySelector('li:nth-child(3)');
+    console.log(removeEle);
+
+    removeEle.remove();
+   </script>
+</html>
